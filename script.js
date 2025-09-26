@@ -60,6 +60,7 @@ function renderRepo(repo) {
   li.querySelector(".delete-btn").addEventListener("click", () =>
     removeRepo(repo.id)
   );
+
   return li;
 }
 
