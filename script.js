@@ -1,7 +1,7 @@
 const searchInput = document.getElementById("search");
 const direktoriesList = document.getElementById("suggestions"); // подсказки ваиранты
 const repoList = document.getElementById("repos");
-let selectedRepos = []; // куда сохранять
+let selectedRepos = []; // куда сохранять результаты
 
 // задержка поиска
 function debounce(func, wait) {
@@ -74,7 +74,7 @@ function renderRepoList() {
   // новый элемент для каждого репозитория
   selectedRepos.forEach((repo) => {
     const li = document.createElement("li");
-    li.className = "result"; // ______________________не потерять класс стиля________________
+    li.className = "result"; // ______________не потерять класс стиля____________
     // добавление разметки + кнопки
     li.innerHTML = `
             <div class="info">
