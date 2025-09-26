@@ -29,11 +29,11 @@ async function fetchRepos(query) {
     console.error("Ошибка:", error);
   }
 }
-//
+
 function renderVariant(repo) {
   const li = document.createElement("li");
   li.className = "item";
-  li.textContent = repo.fullname;
+  li.textContent = repo.full_name;
 
   li.addEventListener("click", () => {
     addRepo(repo);
@@ -43,14 +43,14 @@ function renderVariant(repo) {
 
   return li;
 }
-//
+
 function renderRepo(repo) {
   const li = document.createElement("li");
   li.className = "result";
 
   li.innerHTML = `
     <div class="info">
-      <div>Name: ${repo.fullname}</div>
+      <div>Name: ${repo.full_name}</div>
       <div>Owner: ${repo.owner.login}</div>
       <div>Stars: ${repo.stargazers_count}</div>
     </div>
